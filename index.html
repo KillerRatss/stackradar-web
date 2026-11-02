@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StackRadar — Honest 60s Reviews & AI Tools Radar</title>
+  <meta name="description" content="Curated radar and honest ratings of the best AI tools, software, and productivity apps. Updated daily.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: #121826;
+      --border: #1f293d;
+      --text: #f3f4f6;
+      --text-muted: #9ca3af;
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --accent: #10b981;
+      --gold: #fbbf24;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 0 1rem 3rem 1rem;
+    }
+    header {
+      max-width: 900px;
+      margin: 3rem auto 2rem auto;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(99, 102, 241, 0.15);
+      color: #818cf8;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 0.3rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.8rem;
+      background: linear-gradient(135deg, #ffffff 0%, #9ca3af 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    header p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .controls {
+      max-width: 900px;
+      margin: 0 auto 2rem auto;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .search-box {
+      flex: 1;
+      min-width: 250px;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      color: var(--text);
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-box:focus {
+      border-color: var(--primary);
+    }
+    .grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(99, 102, 241, 0.5);
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .card-category {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .score-badge {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      background: rgba(251, 191, 36, 0.1);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      color: var(--gold);
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.375rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      margin-bottom: 1.25rem;
+      flex: 1;
+    }
+    .card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+    .btn-link {
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+    .btn-link:hover {
+      background: var(--primary-hover);
+    }
+    .free-tier-tag {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+    footer {
+      max-width: 900px;
+      margin: 4rem auto 0 auto;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+    }
+    footer a { color: var(--text-muted); text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">Live AI Radar • 2026</div>
+    <h1>StackRadar</h1>
+    <p>Fast, honest 60-second reviews of software and AI tools. No sponsored hype—only what actually saves you time.</p>
+  </header>
+
+  <div class="controls">
+    <input type="text" id="searchInput" class="search-box" placeholder="Search by name, category, or workflow..." oninput="filterTools()">
+  </div>
+
+  <main id="toolsGrid" class="grid">
+    <!-- Populated dynamically via JS -->
+  </main>
+
+  <footer>
+    <p><strong>Affiliate Transparency & Disclaimer:</strong> Some links on this directory are affiliate links. If you click through and subscribe, we may receive a commission at no additional cost to you. We only feature tools that provide tangible value and undergo rigorous hands-on testing.</p>
+    <p style="margin-top: 0.5rem;">© 2026 StackRadar • Powered by GitHub Pages & Automated Video Factory</p>
+  </footer>
+
+  <script>
+    let allTools = [];
+
+    async function loadTools() {
+      try {
+        const res = await fetch('tools.json');
+        allTools = await res.json();
+        renderTools(allTools);
+      } catch (err) {
+        console.error('Error loading tools:', err);
+      }
+    }
+
+    function renderTools(tools) {
+      const grid = document.getElementById('toolsGrid');
+      if (tools.length === 0) {
+        grid.innerHTML = '<p style="color: #9ca3af; text-align: center; grid-column: 1/-1;">No tools found matching your search.</p>';
+        return;
+      }
+      grid.innerHTML = tools.map(t => {
+        const targetUrl = t.affiliate_url && t.affiliate_url.trim() !== '' ? t.affiliate_url : t.website_url;
+        return `
+          <div class="card">
+            <div>
+              <div class="card-top">
+                <div>
+                  <div class="card-category">${t.category}</div>
+                  <div class="card-title">${t.name}</div>
+                </div>
+                <div class="score-badge">★ ${t.rating.toFixed(1)}</div>
+              </div>
+              <p class="card-desc">${t.tagline}</p>
+            </div>
+            <div class="card-footer">
+              <span class="free-tier-tag">${t.free_tier ? '✓ Free tier/trial' : 'Paid'}</span>
+              <a href="${targetUrl}" target="_blank" rel="noopener noreferrer nofollow" class="btn-link">Explore Tool →</a>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function filterTools() {
+      const q = document.getElementById('searchInput').value.toLowerCase();
+      const filtered = allTools.filter(t => 
+        t.name.toLowerCase().includes(q) ||
+        t.category.toLowerCase().includes(q) ||
+        t.tagline.toLowerCase().includes(q) ||
+        (t.best_for && t.best_for.toLowerCase().includes(q))
+      );
+      renderTools(filtered);
+    }
+
+    loadTools();
+  </script>
+</body>
+</html>

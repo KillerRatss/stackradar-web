@@ -1,0 +1,57 @@
+[
+  {
+    "id": "make",
+    "name": "Make.com",
+    "category": "Automation",
+    "rating": 9.2,
+    "tagline": "Visual workflow automation platform without code",
+    "affiliate_url": "",
+    "website_url": "https://www.make.com",
+    "free_tier": true,
+    "best_for": "Connecting APIs and automating repetitive tasks"
+  },
+  {
+    "id": "elevenlabs",
+    "name": "ElevenLabs",
+    "category": "Voice & Audio AI",
+    "rating": 9.5,
+    "tagline": "Industry-leading realistic AI voice generator and cloner",
+    "affiliate_url": "",
+    "website_url": "https://elevenlabs.io",
+    "free_tier": true,
+    "best_for": "Voiceovers, video dubbing, and AI podcasts"
+  },
+  {
+    "id": "notion",
+    "name": "Notion AI",
+    "category": "Productivity",
+    "rating": 8.8,
+    "tagline": "Connected workspace for notes, docs, and project management with built-in AI",
+    "affiliate_url": "",
+    "website_url": "https://www.notion.so",
+    "free_tier": true,
+    "best_for": "Personal knowledge base and team documentation"
+  },
+  {
+    "id": "heygen",
+    "name": "HeyGen",
+    "category": "Video AI",
+    "rating": 9.0,
+    "tagline": "Create studio-quality videos with realistic AI avatars and multilingual voice",
+    "affiliate_url": "",
+    "website_url": "https://www.heygen.com",
+    "free_tier": true,
+    "best_for": "Marketing, customer service, and explainer videos without a camera"
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity AI",
+    "category": "Research",
+    "rating": 9.4,
+    "tagline": "Conversational search engine backed by real-time web citations",
+    "affiliate_url": "",
+    "website_url": "https://www.perplexity.ai",
+    "free_tier": true,
+    "best_for": "Fast fact-checking and comprehensive web research"
+  }
+]
